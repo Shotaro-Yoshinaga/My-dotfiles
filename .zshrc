@@ -152,13 +152,23 @@ alias esh="exec $SHELL -l"
 # カレントディレクトリを保存する
 alias dirs='dirs -v'
 
-# git status
-alias gs="git status"
-
 # tree
 alias tree="tree -NC" #　N: 
 
 
+
+# ------------------------------------
+# git
+# -----------------------------------
+
+# git branch
+alias gb="git branch"
+
+# git fetch
+alias gf="git fetch"
+
+# git status
+alias gs="git status"
 
 # ------------------------------------
 # その他

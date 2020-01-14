@@ -1,0 +1,75 @@
+{
+	"files.autoSave": "onFocusChange",
+	"python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.pythonPath": "/usr/local/opt/python/bin/python3.7",//"/usr/bin/python"
+	"git.enableSmartCommit": true,
+	"editor.wordWrap": "on",
+	"glassit.alpha": 100,
+	"glassit.step": 10,
+
+	"workbench.colorCustomizations": {
+	  "editor.background": "#111113",
+	  "editor.foreground": "#ffffff",
+	  "editorGroup.border": "#d4d4d8",
+	  "editorLineNumber.foreground": "#ffffff",
+	  "editor.selectionBackground": "#6464ffe8",
+	  "errorForeground": "#ff0000",
+
+	  "button.background": "#2424dd",
+	  "badge.background": "#da1212",
+
+	  "input.background": "#555151",
+	  "input.border": "#e8e8eb",
+	  "input.placeholderForeground": "#272729",
+
+	  "scrollbarSlider.background": "#fefeff",
+	  "scrollbarSlider.hoverBackground": "#0e0e11",
+
+	  "statusBar.background": "#ffffff",
+	  "statusBar.foreground": "#020202",
+	  "statusBar.noFolderBackground": "#ffffff",
+	  "statusBar.debuggingBackground": "#ffffff",
+	  "statusBar.border": "#494646",
+	  "statusBarItem.prominentBackground": "#ffffff",
+
+	  "list.activeSelectionBackground": "#454547",
+	  "list.hoverBackground": "#25252c",
+	  "list.invalidItemForeground": "#272729",
+
+	  "activityBar.background": "#3b3939",
+	  "activityBar.foreground": "#d8d8df",
+	  "activityBar.border": "#d4d4d8",
+	  "activityBarBadge.background": "#ffffff",
+	  "activityBarBadge.foreground": "#000000",
+
+	  "sideBar.background": "#141416",
+	  "sideBar.foreground": "#ffffff",
+	  "sideBar.border": "#f3f3f3",
+	  "sideBarTitle.foreground": "#1d1d20",
+
+	  "editorGroupHeader.tabsBackground": "#1c1c1f",
+	  "tab.activeBackground": "#68686e",
+	  "tab.activeForeground": "#fafafa",
+	  "tab.border": "#242429",
+	  "tab.activeBorder": "#37373b",
+	  "tab.inactiveBackground": "#202024",
+	  "tab.inactiveForeground": "#ffffff",
+	  "terminal.foreground": "#ffffff",
+	},
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "newUntitledFile",
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true,
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"explorer.confirmDragAndDrop": false,
+	"editor.renderWhitespace": "all",
+	"git.confirmSync": false,
+	"editor.largeFileOptimizations": false,
+	"python.dataScience.askForKernelRestart": false,
+	"terminal.external.osxExec": "iTerm.app",
+  }
