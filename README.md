@@ -18,6 +18,7 @@ Hack Nerd Fontは，デベロッパーのために開発されたフォントで
 ![iTerm2の環境設定画面](https://drive.google.com/open?id=1M-z3xru7rb9qMtPAlW13IbDHCGwHEE6W)
 
 
+<<<<<<< HEAD
 
 # VSCodeの設定
 git cloneして以下を実行
@@ -30,3 +31,19 @@ git cloneして以下を実行
 [vim-deviconsで格好いいvimを作ろう。](https://qiita.com/park-jh/items/4358d2d33a78ec0a2b5c)
 [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)
 [VSCode 環境をgit管理してどこでも同じ環境を引き継ぐ](https://qiita.com/miiina016/items/018331b36ecf57ed8973)
+=======
+## clone する
+```git clone https://github.com/Shotaro-Yoshinaga/dotfiles.git```
+
+## シェルスクリプトを実行する
+chmod +x dotfiles/setup.sh
+cd ~/dotfiles
+./setup.sh
+
+
+# 参考文献
+[Macのターミナル（iTerm）で生産性を上げるための方法](https://ottan.xyz/terminal-zsh-customize-20190505/)  
+[vim-deviconsで格好いいvimを作ろう。](https://qiita.com/park-jh/items/4358d2d33a78ec0a2b5c)  
+[ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)  
+[dotfilesを管理しよう](https://qiita.com/massy22/items/5bdb97f8d6e93517f916)
+>>>>>>> 9014c82d591224388ba1979354ba2096c6506b40
