@@ -170,6 +170,12 @@ alias gf="git fetch"
 # git status
 alias gs="git status"
 
+# git add -A
+alias gaa="git add -A"
+
+# git commit -m
+alias gcm="git commit -m"
+
 # ------------------------------------
 # その他
 # ------------------------------------
