@@ -137,8 +137,11 @@ alias la="ls -ltra"
 # 1:リストを縦並び
 alias l1="ls -1"
 
-# pipenv shellを開く
-alias ps="pipenv shell"
+# pipenv でjupyterLab起動
+alias jl="pipenv run jupyter lab"
+
+# pipenv shell起動
+alias psh="pipenv shell"
 
 # zshrcをvimで開く
 alias vz="vim ~/.zshrc"
@@ -155,7 +158,11 @@ alias dirs='dirs -v'
 # tree
 alias tree="tree -NC" #　N: 
 
+# pip install
+alias pi="pip install"
 
+# which
+alias w="which"
 
 # ------------------------------------
 # git
@@ -181,6 +188,10 @@ alias gcm="git commit -m"
 
 # git log
 alias glo="git log"
+
+# git diff
+alias gd="git diff"
+
 
 # ------------------------------------
 # その他
