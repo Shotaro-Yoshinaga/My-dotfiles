@@ -192,6 +192,14 @@ alias glo="git log"
 # git diff
 alias gd="git diff"
 
+# git diff HEAD
+alias gdH="git diff HEAD"
+
+# git chechout
+alias gc="git checkout"
+
+# 直前のコミット取り消し
+alias grh="git reset --soft HEAD^"
 
 # ------------------------------------
 # その他
@@ -202,3 +210,15 @@ function chpwd() { ls -1a }
 
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
+
+export CC=gcc
+export CXX=g++
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libressl/lib"
+export CPPFLAGS="-I/usr/local/opt/libressl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/libressl/lib/
+#export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+#export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
