@@ -1,3 +1,6 @@
+"インサートモードのEscをjjに変更"
+inoremap <silent> jj <ESC>
+
 "viで動作させない
 set nocompatible
 
@@ -55,3 +58,4 @@ set smarttab
 
 " クリップボードが使える
 set clipboard+=unnamed
+
