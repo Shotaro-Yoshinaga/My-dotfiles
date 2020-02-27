@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/shotaro/.oh-my-zsh"
 
@@ -164,6 +166,17 @@ alias pi="pip install"
 # which
 alias w="which"
 
+
+# pgrep Rserve (Rserve起動)
+alias pr="pgrep Rserve"
+
+# pgrep Rserve | xargs kill -KILL (Rserve終了)
+alias prk="pgrep Rserve | xargs kill -KILL"
+
+
+# ifconfig (ネットワーク環境の確認)
+alias ic="ifconfig"
+
 # ------------------------------------
 # git
 # -----------------------------------
@@ -185,6 +198,9 @@ alias gaa="git add -A"
 
 # git commit -m
 alias gcm="git commit -m"
+
+# git push
+alias gsh="git push"
 
 # git log
 alias glo="git log"
