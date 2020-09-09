@@ -1,12 +1,13 @@
 #!/bin/zsh
 
-DOT_FILES=(.zshrc .bash_profile ...)
+DOT_FILES=(.zshrc .vimrc .zprofile .vscode)
 
 for file in ${DOT_FILES[@]}
 do
-	ln -s $HOME/dotfiles/$file $HOME/$file
-	ln -s .vimrc ~/.vimrc
-	ln -s .zshrc ~/.zshrc
-	ln -s .bash_brofile ~/.bash_profile
-	ln -s .bashrc ~/.bashrc
+	ln -sf $HOME/dotfiles/$file $HOME/$file
 done
+
+# ln -sf $HOME/dotfiles/.vimrc ~/.vimrc
+# ln -sf $HOME/dotfiles/.zshrc ~/.zshrc
+# ln -sf $HOME/dotfiles/.zprofile ~/.zprofile
+# ln -sf $HOME/dotfiles/.vscode ~/.vscode
