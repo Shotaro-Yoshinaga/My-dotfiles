@@ -1,12 +1,14 @@
-"インサートモードのEscをjjに変更"
+" インサートモードのEscをjjに変更
 inoremap <silent> jj <ESC>
 
-"viで動作させない
+" viで動作させない
 set nocompatible
 
+" 検出」、「プラグイン」、「インデント」をon
 filetype plugin indent on
 
-syntax enable
+" 行番号を表示
+set number
 
 " 文字コードをUTF-8に設定
 set fenc=utf-8
@@ -59,3 +61,12 @@ set smarttab
 " クリップボードが使える
 set clipboard+=unnamed
 
+" シンタックス(macOS)
+let OSTYPE = system('uname')
+if OSTYPE == "Darwin\n"
+  :set term=xterm-256color
+  :syntax on
+endif
+
+" シンタックス
+set syntax on
