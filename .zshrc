@@ -101,11 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+plugins=(docker docker-compose)
+
  fpath=(/usr/local/share/zsh-completions $fpath)
 
- # 補完を有効にする
- autoload -U compinit
- compinit -u
+# 補完を有効にする
+autoload -U compinit
+compinit -u
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -120,7 +122,8 @@ zstyle ':completion:*:sudo:*' command-path /usr/load/sbin /usr/local/bin \
 # キーバインド
 bindkey -v
 
-
+# 一つ上のディレクトリへ移動
+alias ..='cd ..'
 
 # -------------------------------------------------
 # エイリアス
@@ -135,15 +138,6 @@ alias ls="ls -G"
 # r:逆順
 # a:全て表示
 alias la="ls -ltra"
-
-# 1:リストを縦並び
-alias l1="ls -1"
-
-# pipenv でjupyterLab起動
-alias jl="pipenv run jupyter lab"
-
-# pipenv shell起動
-alias psh="pipenv shell"
 
 # zshrcをvimで開く
 alias vz="vim ~/.zshrc"
@@ -173,6 +167,12 @@ alias pr="pgrep Rserve"
 # pgrep Rserve | xargs kill -KILL (Rserve終了)
 alias prk="pgrep Rserve | xargs kill -KILL"
 
+# Start pipenv
+alias psh='pipenv shell'
+
+alias jn='jupyter notebook'
+alias jl='jupyter lab'
+alias python="python3"
 
 # ifconfig (ネットワーク環境の確認)
 alias ic="ifconfig"
@@ -217,6 +217,9 @@ alias gc="git checkout"
 # 直前のコミット取り消し
 alias grh="git reset --soft HEAD^"
 
+# git stash
+alias gst='git stash'
+
 # ------------------------------------
 # その他
 # ------------------------------------
@@ -227,14 +230,36 @@ function chpwd() { ls -1a }
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
-export CC=gcc
-export CXX=g++
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/libressl/lib"
-export CPPFLAGS="-I/usr/local/opt/libressl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/libressl/lib/
-#export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-#export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
-#export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-#export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$PATH:/Users/shotaro/.nodebrew/current/bin
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shotaro/gcp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shotaro/gcp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shotaro/gcp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shotaro/gcp/google-cloud-sdk/completion.zsh.inc'; fi
